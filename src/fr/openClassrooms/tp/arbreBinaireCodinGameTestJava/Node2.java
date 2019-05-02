@@ -6,10 +6,6 @@
  */
 package fr.openClassrooms.tp.arbreBinaireCodinGameTestJava;
 
-import java.io.File;
-
-import fr.openClassrooms.tp.arbreBinaire.Pile;
-
 /**
  * @author franck Desmedt question 19 testCodingame JAva SQL
  *
@@ -134,35 +130,35 @@ public class Node2 {
 	 */
 
 	static void parcoursPréfixeI(Node2 a) {
-		if (a == null)
-			return;
-		Pile p = new Pile();
-		p.ajouter(a);
-		while (!p.estVide()) {
-			a = p.valeur();
-			p.supprimer();
-			System.out.print(a.value + " ");
-			if (a.droit != null)
-				p.ajouter(a.droit);
-			if (a.gauche != null)
-				p.ajouter(a.gauche);
-		}
+//		if (a == null)
+//			return;
+//		Pile p = new Pile();
+//		p.ajouter(a);
+//		while (!p.estVide()) {
+//			a = p.valeur();
+//			p.supprimer();
+//			System.out.print(a.value + " ");
+//			if (a.droit != null)
+//				p.ajouter(a.droit);
+//			if (a.gauche != null)
+//				p.ajouter(a.gauche);
+//		}
 	}
 
 	static void parcoursLargeurI(Node2 a) {
 		if (a == null)
 			return;
-		File f = new File();
-		f.ajouter(a);
-		while (!f.estVide()) {
-			a = f.valeur();
-			f.supprimer();
-			System.out.print(a.value + " ");
-			if (a.gauche != null)
-				f.ajouter(a.gauche);
-			if (a.droit != null)
-				f.ajouter(a.droit);
-		}
+//		File f = new File(f, null);
+//		f.ajouter(a);
+//		while (!f.estVide()) {
+//			a = f.valeur();
+//			f.supprimer();
+//			System.out.print(a.value + " ");
+//			if (a.gauche != null)
+//				f.ajouter(a.gauche);
+//			if (a.droit != null)
+//				f.ajouter(a.droit);
+//		}
 	}
 
 }

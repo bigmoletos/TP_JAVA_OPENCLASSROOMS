@@ -4,6 +4,8 @@
  */
 package fr.openClassrooms.tp.arbreBinaire;
 
+import fr.openClassrooms.tp.arbreBinaireCodinGameTestJava.Node2;
+
 /**
  * @author franck Desmedt
  *
@@ -21,7 +23,7 @@ public class Pile {
 	/**
 	 * Contruit une pile vide pouvant contenir taille_max elements
 	 */
-	Pile() {
+	public Pile() {
 		contenu = new int[taille_max];
 		taille_courante = 0;
 	}
@@ -57,11 +59,11 @@ public class Pile {
 	/**
 	 * Rajoute un element dans la pile Cet element est ajoute a la fin du tableau
 	 * 
-	 * @param i element a rajouter dans la pile
+	 * @param a element a rajouter dans la pile
 	 */
-	public void ajouter(int i) {
+	public void ajouter(Node2 a) {
 		if (!estPleine()) {
-			contenu[taille_courante] = i;
+			// contenu[taille_courante] = a;
 			taille_courante++;
 		}
 	}
@@ -77,5 +79,39 @@ public class Pile {
 			return contenu[taille_courante];
 		} else
 			return -1;
+	}
+
+	/**
+	 * @description
+	 *
+	 * @return Node2
+	 *
+	 * @method valeur
+	 * @class Pile
+	 * @version 1.0
+	 * @date jeudi 02 mai 2019
+	 * @see
+	 *
+	 **/
+	public Node2 valeur() {
+		System.out.println("affiche valeur noeud");
+		return null;
+	}
+
+	/**
+	 * @description
+	 *
+	 * @return void
+	 *
+	 * @method supprimer
+	 * @class Pile
+	 * @version 1.0
+	 * @date jeudi 02 mai 2019
+	 * @see
+	 *
+	 **/
+	public void supprimer() {
+		System.out.println("supprime valeur noeud");
+
 	}
 }

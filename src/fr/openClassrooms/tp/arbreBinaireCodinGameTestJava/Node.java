@@ -44,25 +44,26 @@ public class Node {
 		return value;
 	}
 
-	public int getArbeGauche() {
+	public Node getArbeGauche() {
 		return left;
 	}
 
-	public int getArbeRight() {
+	public Node getArbeRight() {
 		return right;
 	}
 
 	// retourne le noeud si trouvé sinon retourne null
 	public Node find(int v) {
-		Node noeud;
-		while (!(noeud == 0)) {
+		Node noeud = null;
+		while (!(v == 0)) {
 			if (value == getValue()) {
-				return noeud;
+
 			} else {
 
 				return null;
 			}
 		}
+		return noeud;
 
 	}
 

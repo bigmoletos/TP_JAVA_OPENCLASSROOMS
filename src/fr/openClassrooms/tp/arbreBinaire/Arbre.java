@@ -28,9 +28,9 @@ public class Arbre {
 	}
 
 	// getter
-	public int getValeur() {
-		return (valeur);
-	}
+//	public int getValeur() {
+//		return (valeur);
+//	}
 
 	public Arbre getSousArbreGauche() {
 		return (gauche);
@@ -62,7 +62,7 @@ public class Arbre {
 	 * Affiche l'arbre selon un parcours prefixe
 	 */
 	public void ParcoursPrefixe() {
-		System.out.println(getValeur());
+//		System.out.println(getValeur());
 		if (getSousArbreGauche() != null)
 			getSousArbreGauche().ParcoursPrefixe();
 		if (getSousArbreDroit() != null)
@@ -75,7 +75,7 @@ public class Arbre {
 	public void ParcoursInfixe() {
 		if (getSousArbreGauche() != null)
 			getSousArbreGauche().ParcoursInfixe();
-		System.out.println(getValeur());
+//		System.out.println(getValeur());
 		if (getSousArbreDroit() != null)
 			getSousArbreDroit().ParcoursInfixe();
 	}
@@ -88,7 +88,7 @@ public class Arbre {
 			getSousArbreGauche().ParcoursPostfixe();
 		if (getSousArbreDroit() != null)
 			getSousArbreDroit().ParcoursPostfixe();
-		System.out.println(getValeur());
+		// System.out.println(getValeur());
 	}
 
 	/**
@@ -107,10 +107,10 @@ public class Arbre {
 			return false;
 
 		// A ce point, a et b != null, on peut acceder a leurs champs
-		if (a.getValeur() != b.getValeur())
-			return false;
-		return (arbresEgaux(a.getSousArbreGauche(), b.getSousArbreGauche())
-				&& arbresEgaux(a.getSousArbreDroit(), b.getSousArbreDroit()));
+//		if (a.getValeur() != b.getValeur())
+		return false;
+//		return (arbresEgaux(a.getSousArbreGauche(), b.getSousArbreGauche())
+//				&& arbresEgaux(a.getSousArbreDroit(), b.getSousArbreDroit()));
 	}
 
 	/**
@@ -146,21 +146,20 @@ public class Arbre {
 //////////
 	public void ParcoursLargeur() {
 //		File file = new File();
-		File file = new File();
-		file.ajouter(this);
-
-		Arbre a;
-		Arbre b;
-		while (!file.estVide()) {
-			a = (Arbre) file.retirer();
-			System.out.println(a.getValeur());
-			b = a.getSousArbreGauche();
-			if (b != null)
-				file.ajouter(b);
-			b = a.getSousArbreDroit();
-			if (b != null)
-				file.ajouter(b);
-		}
+//		file.ajouter(this);
+//
+//		Arbre a;
+//		Arbre b;
+//		while (!file.estVide()) {
+//			a = (Arbre) file.retirer();
+//			System.out.println(a.getValeur());
+//			b = a.getSousArbreGauche();
+//			if (b != null)
+//				file.ajouter(b);
+//			b = a.getSousArbreDroit();
+//			if (b != null)
+//				file.ajouter(b);
+//		}
 	}
 	///////////////////////
 
@@ -169,13 +168,13 @@ public class Arbre {
 	 * @return un boolean indiquant si a est un arbre binaire de recherche
 	 */
 	public static boolean estABR(Arbre a) {
-		if (a == null)
-			return true;
-		if ((a.getSousArbreGauche() != null) && (a.getSousArbreGauche().getValeur() > a.getValeur()))
-			return false;
-		if ((a.getSousArbreDroit() != null) && (a.getValeur() > a.getSousArbreDroit().getValeur()))
-			return false;
-		return (estABR(a.getSousArbreGauche()) && estABR(a.getSousArbreDroit()));
+//		if (a == null)
+//			return true;
+//		if ((a.getSousArbreGauche() != null) && (a.getSousArbreGauche().getValeur() > a.getValeur()))
+//			return false;
+//		if ((a.getSousArbreDroit() != null) && (a.getValeur() > a.getSousArbreDroit().getValeur()))
+		return false;
+//		return (estABR(a.getSousArbreGauche()) && estABR(a.getSousArbreDroit()));
 	}
 
 	/**
@@ -183,12 +182,12 @@ public class Arbre {
 	 * @return un boolean indiquant si value a ete trouve ou non
 	 */
 	public boolean recherche(int value) {
-		if (value == getValeur())
-			return true;
-		if ((value < getValeur()) && (getSousArbreGauche() != null))
-			return (getSousArbreGauche().recherche(value));
-		if ((value > }getValeur()) && (getSousArbreDroit() != null))
-			return (getSousArbreDroit().recherche(value));
+//		if (value == getValeur())
+//			return true;
+//		if ((value < getValeur()) && (getSousArbreGauche() != null))
+//			return (getSousArbreGauche().recherche(value));
+//		if ((value > }getValeur()) && (getSousArbreDroit() != null))
+//			return (getSousArbreDroit().recherche(value));
 		return false;
 	}
 
@@ -197,20 +196,20 @@ public class Arbre {
 	 *              http://www-sop.inria.fr/oasis/personnel/Guillaume.Dufay/MASS2/tp11/Arbre.java
 	 */
 	public void insertion(int value) {
-		if (value == getValeur())
-			return; // la valeur est deja dans l'arbre
-		if (value < getValeur()) {
-			if (getSousArbreGauche() != null)
-				getSousArbreGauche().insertion(value);
-			else
-				gauche = new Arbre(value);
-		}
-		if (value > getValeur()) {
-			if (getSousArbreDroit() != null)
-				getSousArbreDroit().insertion(value);
-			else
-				droit = new Arbre(value);
-		}
+//		if (value == getValeur())
+//			return; // la valeur est deja dans l'arbre
+//		if (value < getValeur()) {
+//			if (getSousArbreGauche() != null)
+//				getSousArbreGauche().insertion(value);
+//			else
+//				gauche = new Arbre(value);
+//		}
+//		if (value > getValeur()) {
+//			if (getSousArbreDroit() != null)
+//				getSousArbreDroit().insertion(value);
+//			else
+//				droit = new Arbre(value);
+//		}
 	}
 
 	// LE MAIN POUR TESTER
