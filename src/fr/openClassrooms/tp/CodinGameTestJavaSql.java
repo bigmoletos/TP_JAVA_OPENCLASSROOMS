@@ -120,7 +120,7 @@ public class CodinGameTestJavaSql {
 		System.out.println("question  13/29 ");
 		System.out.println("############################");
 
-		ArrayList liste = new ArrayList(2);
+		ArrayList<Integer> liste = new ArrayList<Integer>(2);
 		liste.add(1);
 		liste.add(1);
 		liste.add(1);
@@ -183,7 +183,7 @@ public class CodinGameTestJavaSql {
 		System.out.println("question  4/29 ");
 		System.out.println("############################");
 		String valeurS = new String();
-		String valeurS2;
+//		String valeurS2;
 		System.out.println("la valeur de s est : " + valeurS);
 		// System.out.println("la valeur de s est : " + valeurS2);
 		System.out.println("############################");

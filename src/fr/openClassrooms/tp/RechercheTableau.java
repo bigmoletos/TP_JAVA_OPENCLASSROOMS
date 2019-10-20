@@ -143,18 +143,18 @@ public class RechercheTableau {
 	}
 
 	// question 22
-	static int closestToZero(int[] ints) {
-		int result = 0;
-		int plusProche=0;
-		
-		
-		for (int i : ints) {
-if() {
-			
-			
-		}
-		return result;
-	}
+//	static int closestToZero(int[] ints) {
+//		int result = 0;
+//		int plusProche=0;
+//		
+//		
+//		for (int i : ints) {
+//if() {
+//			
+//			
+//		}
+//		return result;
+//	}
 
 	/**
 	 * @description programme principal lance les methodes exists
